@@ -29,7 +29,7 @@ namespace InventoryManagementSystem
                 string MyQuery = "select * from CategoryTb";
                 SqlDataAdapter da = new SqlDataAdapter(MyQuery, baglanti);
                 SqlCommandBuilder builder = new SqlCommandBuilder(da); // insert update delete komutları otomatikmen oluştu.
-                DataSet ds = new DataSet();
+                DataSet ds = new DataSet(); // verileri buraya aktarıyor
                 da.Fill(ds);
                 CategoriesGV.DataSource = ds.Tables[0];
                 baglanti.Close();
